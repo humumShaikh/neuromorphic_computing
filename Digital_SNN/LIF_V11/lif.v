@@ -26,7 +26,9 @@ module lif
     parameter   VThreshold  =   20,
     parameter   Leak        =   2,
     parameter   synapse     =   2,
-    parameter   signed [((synapse*8)-1):0] weight = {(-8'sd3) , 8'sd4}        //sometimes the -ve default value set here may cause issue in instantiating the block design in vivado, it is just a vivado block design parser issue. Set it to a positive value here and then in the block design set it to 2's complement.
+    parameter   signed [((synapse*8)-1):0] weight = {(-8'sd3) , 8'sd4}        //sometimes the -ve default value set here may cause issue in instantiating the block design in vivado, 
+                                                                            //it is just a vivado block design parser issue. 
+                                                                        //Set it to a positive value here and then in the block design set it to 2's complement.
 )
 (
     input   wire            clk,
