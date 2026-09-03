@@ -26,7 +26,7 @@ module lif
     parameter   VThreshold  =   20,
     parameter   Leak        =   2,
     parameter   synapse     =   2,
-    parameter   signed [((synapse*8)-1):0] weight = {-8'sd3 , 8'sd4}
+    parameter   signed [((synapse*8)-1):0] weight = {(-8'sd3) , 8'sd4}
 )
 (
     input   wire            clk,
