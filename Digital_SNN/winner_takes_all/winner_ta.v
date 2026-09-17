@@ -36,6 +36,7 @@ module winner_ta
     reg [($clog2(samples)-1) : 0]   fireCount   [0 : (inputs-1)];
     reg [($clog2(samples)-1) : 0]   counter;
     reg [($clog2(samples)-1) : 0]   temp;  
+    reg                             decisionFlag;
 
     
     localparam [3:0]    IDLE        =   0,
@@ -55,6 +56,8 @@ module winner_ta
         counter <= 0;
         
         temp <= 0;
+
+        decisionFlag <= 0;
         
         for(i = 0; i < inputs; i = i + 1)
         begin
@@ -73,9 +76,11 @@ module winner_ta
                                             for(i = 0; i < inputs; i = i + 1)
                                             begin
                                                 fireCount[i] <= 0;
-                                                temp <= 0;
-                                                counter <= 0;
                                             end
+
+                                            temp <= 0;
+                                            counter <= 0;
+                                            decisionFlag <= 0;
                                             
                                             STATE <= SAMPLE;
                                         end
@@ -121,7 +126,12 @@ module winner_ta
             DECIDE          :           begin
                                             for(i = 0; i < inputs; i = i + 1)
                                             begin
-                                                if(fireCount[i] == temp)    dout[i] <= 1;
+                                                if(fireCount[i] == temp    &&    decisionFlag != 1)
+                                                begin
+                                                    dout[i] <= 1;
+                                                    decisionFlag <= 1;
+                                                end
+                                                
                                                 else                        dout[i] <= 0;  
                                             end
                                             
