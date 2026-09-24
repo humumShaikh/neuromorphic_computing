@@ -43,6 +43,7 @@
  *   uartns550   9600
  *   uartlite    Configurable only in HW design
  *   ps7_uart    115200 (configured by bootrom/bsp)
+ *	 written by : copperwire
  */
 
 #include <stdio.h>
