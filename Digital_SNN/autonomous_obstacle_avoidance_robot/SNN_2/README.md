@@ -8,5 +8,10 @@
 <br>
 <br>
 
+**For the weight of the synapses coming into layer 1 neurons, set it to +8 for each neuron**
+<br>
+<br>
+<br>
+
 **The image below shows the neuron to neuron synaptic weights between the layer 1 neurons and the layer 2 neurons**
 <img width="2720" height="2040" alt="layer2_synaptic_weights" src="https://github.com/user-attachments/assets/b06d057c-52e0-40f6-b529-64502f78c770" />
