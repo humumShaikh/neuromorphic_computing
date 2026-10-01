@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: CWIR3
-// Engineer:
+// Engineer:copperwire
 // 
 // Create Date: 09/29/2026 12:25:55 PM
 // Design Name: 
