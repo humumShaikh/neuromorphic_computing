@@ -6,8 +6,8 @@
 // Create Date: 09/10/2026 10:36:34 AM
 // Design Name: 
 // Module Name: winner_ta
-// Project Name: 
-// Target Devices: 
+// Project Name: SNN
+// Target Devices: ZYNQ 7000
 // Tool Versions: 
 // Description: 
 // 
