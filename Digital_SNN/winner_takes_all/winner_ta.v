@@ -9,7 +9,7 @@
 // Project Name: SNN
 // Target Devices: ZYNQ 7000
 // Tool Versions: 
-// Description: 
+// Description: counts the number of times each neuron has fired within the given number of clock cycles and then outputs the one which has fired the maximum number of times
 // 
 // Dependencies: NA
 // 
